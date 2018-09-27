@@ -1,0 +1,710 @@
+@import "desktop";
+@import "tablet";
+@import "mobile";
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .header {
+      flex: 0 0 68px;
+      width: inherit;
+      display: flex;
+
+      .wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .logo {
+          position: relative;
+          color: @MAIN_COLOR;
+          font-family: PlayfairDisplay, "Times New Roman", serif;
+          font-size: 14px;
+          font-weight: 100;
+          &:before {
+            background: url(../images/sprite-retina.png) 0 0 no-repeat;
+            width: 21px;
+            height: 50px;
+            background-size: 512px 512px;
+            content: '';
+            position: absolute;
+          }
+        }
+
+        .list {
+
+          &__item {
+
+            &:hover {
+              background-color: @MAIN_COLOR;
+            }
+
+            &:hover a {
+              color:white;
+            }
+          }
+
+          &__link {
+            display:block;
+            height:68px;
+            line-height:68px;
+          }
+        }
+      }
+    }
+
+    .main {
+      flex: 1 0 auto;
+      width: 100%;
+
+      .events-wrapper {
+        background-color: @BACKGROUND-COLOR;
+        width: 100%;
+        position: relative;
+
+        .events {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin: 0 auto;
+          padding: 30px 0;
+
+          .slider {
+            padding: 20px 0;
+            overflow: hidden;
+            position: relative;
+            right: -100px;
+            display: flex;
+
+            img {
+              width: 640px;
+              height: auto;
+              position: absolute;
+              align-self: center;
+            }
+          }
+        }
+      }
+
+      .announcement {
+        flex: 1 1 320px;
+        padding: 0;
+
+        &__header {
+          font-family: PlayfairDisplay, "Times New Roman", serif;
+          color: @BLACK_COLOR;
+          font-size: 26px;
+        }
+
+        &__tag {
+          position: relative;
+          padding: 10px 20px;
+          font-family: Roboto, Arial, sans-serif;
+          font-size: 14px;
+          color: @GREY_COLOR;
+
+          &:hover {
+            color:@MAIN_COLOR;
+            font-weight:bold;
+          }
+
+          &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            background: url(../images/sprite-retina.png) -110px -60px no-repeat;
+            background-size: 512px 512px;
+            width: 16px;
+            height: 16px;
+            left: 0;
+          }
+        }
+
+        &__description {
+          font-family: Roboto, Arial, sans-serif;
+          color: @MAIN_COLOR;
+          font-size: 16px;
+          text-align: justify;
+          line-height: 24px;
+        }
+
+        &__btn-group {
+          margin: 20px 0;
+          display: inline-flex;
+        }
+
+        &__button-events {
+          background-color: transparent;
+          border: 1px solid @MAIN_COLOR;
+          text-transform: uppercase;
+          font-family: Roboto, Arial, sans-serif;
+          padding: 10px 14px;
+          font-size: 14px;
+          color: @MAIN_COLOR;
+
+          &:hover {
+            color: @WHITE_COLOR;
+            background-color: @MAIN_COLOR;
+          }
+        }
+
+        &__calendar {
+          display: block;
+          border: 0;
+          background-color: transparent;
+          padding: 8px 14px;
+          font-family: Roboto, Arial, sans-serif;
+          position: relative;
+          margin-left: 80px;
+          font-size: 14px;
+          color: @MAIN_COLOR;
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: -2px;
+            width: 46px;
+            height: 46px;
+            display: block;
+            background: url(../images/sprite-retina.png) -380px 0 no-repeat;
+            background-size: 512px 512px;
+          }
+        }
+      }
+
+      .projects-wrapper {
+        width: 100%;
+
+        .current-projects {
+
+          &__header {
+            font-family: PlayfairDisplay, "Times New Roman", serif;
+            color: @BLACK_COLOR;
+            font-size: 20px;
+            font-weight: 200;
+          }
+
+          &__item {
+
+            &:nth-child(even) {
+              border: 1px solid @MAIN_COLOR;
+            }
+
+            & > a > span {
+              font-family: PlayfairDisplay, "Times New Roman", serif;
+              font-size: 16px;
+              font-weight: 100;
+            }
+
+            &:nth-child(even) > a > span {
+              background-color: @WHITE_COLOR_RGBA;
+              color: @MAIN_COLOR;
+            }
+
+            &:nth-child(odd) > a > span {
+              background-color: @MAIN_COLOR_RGBA_TRANSPARENT;
+              color: @WHITE_COLOR;
+            }
+
+            &:first-child > a {
+              background: url(../images/park-Vileika.jpg) center no-repeat;
+              background-size: cover;
+            }
+
+            &:nth-child(3) > a {
+              background: url(../images/book.jpg) center no-repeat;
+              background-size: cover;
+            }
+
+            &:first-child, &:nth-child(3) {
+              &:hover > a > span {
+                background-color: @MAIN_COLOR_RGBA_NON-TRANSPARENT;
+              }
+            }
+
+            &:nth-child(2) {
+              &:hover > a {
+                background: url(../images/monastery.jpg) center no-repeat;
+                background-size: cover;
+                span {
+                  color: white;
+                  background-color: @MAIN_COLOR_RGBA_TRANSPARENT;
+                }
+              }
+            }
+          }
+
+          &__link {
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+          }
+
+          &__title {
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: rgba(184, 151, 102, .8);
+            padding: 20px 60px 20px 20px;
+            font-weight: 100;
+          }
+
+          &__button {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 1px solid @MAIN_COLOR;
+            padding: 10px;
+            color: @MAIN_COLOR;
+            margin: 20px 0 40px 0;
+            &:hover {
+              background-color: @MAIN_COLOR;
+              color: @WHITE_COLOR;
+            }
+          }
+        }
+      }
+
+      .foundation-wrapper {
+        width: 100%;
+        background-color: @BACKGROUND-COLOR;
+
+        .about-foundation {
+          margin: 0 auto;
+          height: auto;
+
+          &__header {
+            font-family: PlayfairDisplay, "Times New Roman", serif;
+            color: @BLACK_COLOR;
+            font-size: 20px;
+            font-weight: 200;
+            padding: 20px 0;
+          }
+
+          &__description {
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            color: @MAIN_COLOR;
+            font-weight: 200;
+            line-height: 30px;
+            text-align: justify;
+          }
+
+          &__learn-more {
+            display: inline-block;
+            padding-top: 40px;
+            color: @MAIN_COLOR;
+            border-bottom: 1px solid @MAIN_COLOR;
+            text-transform: uppercase;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .past-events-wrapper {
+        width: 100%;
+        background-color: @BACKGROUND-COLOR;
+
+        .past-events {
+          margin: 0 auto;
+
+          &__header {
+            font-family: PlayfairDisplay, "Times New Roman", serif;
+            color: @BLACK_COLOR;
+            font-size: 22px;
+            font-weight: 200;
+            padding: 20px;
+          }
+
+          &__item {
+            padding-bottom: 40px;
+            background-color: @WHITE_COLOR;
+            transition: background-color .4s ease;
+
+            &:hover {
+              background-color: @LIGHT_GREY_COLOR;
+              box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            }
+          }
+
+          &__tag {
+            display: block;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 20px 10px 48px;
+            background-color: @WHITE_MILK_COLOR;
+            color: @GREY_COLOR;
+            transition: background-color .4s ease;
+            position: relative;
+            min-height: 40px;
+
+            &:hover {
+              background-color: @LIGHT_GREY_COLOR;
+              box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            }
+
+            &:before {
+              position: absolute;
+              content: '';
+              display: block;
+              background: url(../images/sprite-retina.png) -110px -60px no-repeat;
+              background-size: 512px 512px;
+              width: 16px;
+              height: 16px;
+              top: 12px;
+              left: 22px;
+            }
+          }
+
+          &__show-more-btn {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid @MAIN_COLOR;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            color: @MAIN_COLOR;
+            line-height: 40px;
+
+            &:hover {
+              background-color: @MAIN_COLOR;
+              color: @WHITE_COLOR;
+            }
+          }
+
+          &__picture {
+            width: 100%;
+            height: 200px;
+          }
+
+          &__description {
+            padding: 20px 20px 0;
+            text-overflow: ellipsis;
+            font-family: Roboto, Arial, sans-serif;
+            color: @MAIN_COLOR;
+            font-size: 16px;
+            font-weight: 100;
+            text-align: justify;
+            overflow: hidden;
+            line-height: 25px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            word-wrap: normal;
+          }
+
+          .aside-banner {
+            flex: 0 0 280px;
+            position: relative;
+
+            &__background {
+              width: 260px;
+              position: absolute;
+              transform: translate(0px, 0px);
+              background: url(../images/church.jpg) no-repeat;
+
+              &_fixed {
+                width: 260px;
+                position: fixed;
+                top: 20px;
+                background: url(../images/church.jpg) no-repeat;
+
+              }
+            }
+
+            &__wrapper {
+              width: 100%;
+              height: 100%;
+              background-color: rgba(74, 122, 34, 0.8);
+            }
+
+            &__information {
+              font-family: PlayfairDisplay, "Times New Roman", serif;
+              font-size: 18px;
+              color: @WHITE_COLOR;
+              font-weight: 100;
+              line-height: 26px;
+              text-align: center;
+              letter-spacing: 1.5px;
+              word-spacing: 3px;
+              display: block;
+              padding: 40px 20px 30px;
+              overflow: hidden;
+              text-shadow: 0 0 100px transparent;
+              transition: all 300ms linear 0ms;
+
+              &:hover {
+                text-shadow: 2px 2px 2px #4F4F4F;
+                transition: text-shadow 300ms linear 0ms;
+              }
+            }
+          }
+        }
+
+        .date {
+          padding: 20px 20px 0;
+        }
+      }
+
+      .our-partners {
+        width: 100%;
+
+        &__header {
+          font-family: PlayfairDisplay, "Times New Roman", serif;
+          color: @BLACK_COLOR;
+          font-size: 16px;
+          line-height: 40px;
+        }
+
+        &__link {
+          filter: grayscale(100%);
+          transition: filter 0.4s linear;
+
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+
+        &__image {
+          width: 100%;
+        }
+
+        .help-banner {
+
+          &__wrapper {
+            height: auto;
+            background-color: @BACKGROUND-COLOR;
+
+            &:hover {
+              background-color: @MAIN_COLOR;
+              color: @WHITE_COLOR;
+            }
+          }
+
+          &__content {
+
+            text-align: center;
+            font-family: PlayfairDisplay, "Times New Roman", serif;
+            letter-spacing: 1px;
+
+            &:nth-child(2) {
+              font-family: Roboto, Arial, sans-serif;
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      width: 100%;
+      background-color: @MAIN_COLOR;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: @WHITE_COLOR;
+
+      &__information {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      &__information-header {
+        font-family: PlayfairDisplay, "Times New Roman", serif;
+        font-weight: 100;
+        position: relative;
+        padding: 0 80px 0 60px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 20px;
+          background: url(../images/sprite-retina.png) 0 -100px no-repeat;
+          background-size: 512px 512px;
+          width: 21px;
+          height: 50px;
+        }
+      }
+
+      &__information-goals {
+        display: block;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 100;
+        padding: 40px 0;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+      }
+
+      .contacts {
+        flex: 0 0 24%;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 100;
+
+        &__header {
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 8px;
+        }
+
+        &__btn {
+          margin-top: 6px;
+          background-color: transparent;
+          border: 1px solid @WHITE_COLOR;
+          color: @WHITE_COLOR;
+          line-height: 24px;
+          padding: 6px 20px;
+
+          &:hover {
+            background-color: @WHITE_COLOR;
+            color:@MAIN_COLOR;
+          }
+        }
+
+        span {
+          display: block;
+          font-style: normal;
+          padding: 6px 0;
+        }
+      }
+
+      &__social-header {
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      &__menu {
+        text-transform: uppercase;
+        font-family: Roboto, Arial, sans-serif;
+        font-weight: 100;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      &__menu-item {
+        color: @WHITE_COLOR;
+        line-height: 18px;
+        text-decoration: underline;
+        padding: 0 4px;
+      }
+
+      &__author-wrights {
+        font-family: Roboto, Arial, sans-serif;
+        font-weight: 100;
+        font-size: 14px;
+      }
+    }
+
+    .social-btn {
+      display: flex;
+      justify-content: center;
+
+      &__group {
+        display: inline-flex;
+        justify-content: center;
+        padding-bottom: 30px;
+      }
+
+      &__item {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: @WHITE_COLOR;
+        opacity: 0.7;
+        line-height: 40px;
+        font-size: 22px;
+        color: rgba(74, 122, 34, 0.8);
+        text-align: center;
+        margin: 0 4px;
+
+        &:hover {
+          color: @WHITE_COLOR;
+          opacity: 1;
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        &:hover.fa-facebook-f {
+          background-color: @FACEBOOK_COLOR;
+        }
+
+        &:hover.fa-vk {
+          background-color: @VK-COLOR;
+        }
+
+        &:hover.fa-odnoklassniki {
+          background-color: @OK-COLOR;
+        }
+      }
+    }
+
+    .date {
+      font-family: Roboto, Arial, sans-serif;
+      color: @MAIN_COLOR;
+
+      &__number {
+        font-weight: 300;
+        font-size: 46px;
+      }
+
+      &__block {
+        display: inline-block;
+      }
+
+      &__month {
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+
+      &__year {
+        display: block;
+      }
+    }
+  }
+}
+

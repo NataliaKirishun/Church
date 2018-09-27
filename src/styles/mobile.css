@@ -1,0 +1,247 @@
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url(../fonts/PlayfairDisplay-Regular.otf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@media screen and (max-width: 767px) {
+  html body .header {
+    width: 100%;
+    position: relative;
+  }
+  html body .header .wrapper .logo {
+    font-size: 12px;
+    width: 80%;
+    margin-left: 40px;
+  }
+  html body .header .wrapper .logo:before {
+    left: -24px;
+    top: -4px;
+  }
+  html body .header .wrapper .nav-btn {
+    background: url(../images/gamburger.png) center center no-repeat #b89766;
+    width: 68px;
+    height: 68px;
+    border: 0;
+  }
+  html body .header .wrapper .nav {
+    display: block;
+    z-index: 5;
+  }
+  html body .header .wrapper .nav .list {
+    position: absolute;
+    top: 68px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #b89766;
+  }
+  html body .header .wrapper .nav .list__link {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px;
+    text-transform: uppercase;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+  }
+  html body .header .wrapper .nav .list__link:hover {
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+  html body .header .wrapper .close {
+    display: none;
+  }
+  html body .main .events-wrapper .events {
+    max-width: 90%;
+    height: 330px;
+  }
+  html body .main .events-wrapper .events .announcement__tag {
+    display: none;
+  }
+  html body .main .events-wrapper .events .announcement__header {
+    margin-top: 20px;
+  }
+  html body .main .events-wrapper .events .announcement__btn-group {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  html body .main .events-wrapper .events .announcement__calendar {
+    margin-left: 40px;
+  }
+  html body .main .events-wrapper .events .slider {
+    display: none;
+  }
+  html body .main .projects-wrapper .current-projects {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  html body .main .projects-wrapper .current-projects__header {
+    margin: 30px 0;
+  }
+  html body .main .projects-wrapper .current-projects__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  html body .main .projects-wrapper .current-projects__item {
+    height: 80px;
+    margin: 10px 0;
+  }
+  html body .main .projects-wrapper .current-projects__button {
+    display: block;
+    flex: 0 0 100%;
+    align-self: stretch;
+  }
+  html body .main .foundation-wrapper .foundation {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  html body .main .foundation-wrapper .aside-banner {
+    display: none;
+  }
+  html body .main .past-events-wrapper .past-events {
+    max-width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+  html body .main .past-events-wrapper .past-events .aside-banner {
+    display: none;
+  }
+  html body .main .past-events-wrapper .past-events_column-container {
+    display: flex;
+    flex-direction: column;
+  }
+  html body .main .past-events-wrapper .past-events__column:first-child {
+    height: 1617px;
+    overflow: hidden;
+  }
+  html body .main .past-events-wrapper .past-events__column:nth-child(2) {
+    display: none;
+  }
+  html body .main .past-events-wrapper .past-events__show-more-btn {
+    margin-bottom: 50px;
+  }
+  html body .main .our-partners__wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  html body .main .our-partners__header-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  html body .main .our-partners .arrow-back {
+    display: block;
+    font-family: Roboto, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    order: 1;
+    height: 60px;
+    width: 100%;
+    border: 2px solid #b89766;
+    position: relative;
+    text-align: left;
+    line-height: 60px;
+    padding-left: 60px;
+    background-color: rgba(184, 151, 102, 0.8);
+    color: #fff;
+  }
+  html body .main .our-partners .arrow-back:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 60px;
+    height: 60px;
+    background: #b89766 url(../images/arrow.png) -8px -10px no-repeat;
+    flex: 0 0 60px;
+  }
+  html body .main .our-partners .arrow-back:hover:after {
+    background: url(../images/arrow.png) -86px -8px no-repeat;
+  }
+  html body .main .our-partners__header {
+    display: block;
+    order: 2;
+    max-width: 90%;
+    margin: 20px 5%;
+    text-align: left;
+  }
+  html body .main .our-partners__logo {
+    max-width: 90%;
+    margin: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  html body .main .our-partners__link {
+    width: 44%;
+    padding: 10px 0;
+  }
+  html body .main .our-partners__list {
+    margin-bottom: 30px;
+  }
+  html body .main .our-partners .help-banner {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  html body .main .our-partners .help-banner__wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+  html body .main .our-partners .help-banner__content {
+    display: block;
+    padding: 10px 0;
+  }
+  html body .main .our-partners .help-banner__content:first-child {
+    width: 25%;
+  }
+  html body .main .our-partners .help-banner__content:nth-child(2) {
+    width: 50%;
+  }
+  html body .footer {
+    flex: 0 0 700px;
+    width: 100%;
+  }
+  html body .footer__wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  html body .footer__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  html body .footer__information-header {
+    flex-shrink: 1;
+    display: block;
+    font-size: 14px;
+    max-width: 55%;
+    order: 1;
+    margin-top: 20px;
+  }
+  html body .footer__menu {
+    order: 2;
+  }
+  html body .footer .contacts {
+    order: 3;
+  }
+  html body .footer__social {
+    order: 4;
+    margin-top: 20px;
+  }
+}

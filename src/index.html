@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+
+<!--HEADER-->
+
+<header class="header">
+    <div class="wrapper">
+        <a class="logo" href="#">Благотворительный фонд имени Преподобной Евфросинии Полоцкой</a>
+        <nav id="mainMenu" class="nav close">
+            <ul class="list">
+                <li class="list__item"><a class="list__link" href="#aboutFound" tabindex="1">О фонде</a></li>
+                <li class="list__item"><a class="list__link" href="#pastEvents" tabindex="2">События</a></li>
+                <li class="list__item"><a class="list__link" href="#currentProjects" tabindex="3">Проекты</a></li>
+                <li class="list__item"><a class="list__link" href="#ourPartners" tabindex="4">Адресная помощь</a></li>
+                <li class="list__item"><a class="list__link" href="#currentProjects" tabindex="5">Библиотека</a></li>
+                <li class="list__item"><a class="list__link" href="#footer" tabindex="6">Контакты</a></li>
+            </ul>
+        </nav>
+        <button id="menuBtn" class="nav-btn"></button>
+    </div>
+</header>
+
+<!--MAIN-->
+
+<main class="main">
+
+    <!--EVENTS SECTION-->
+
+    <div class="events-wrapper">
+        <section class="events">
+            <div class="announcement">
+                <div class="date">
+                    <span class="date__number">1</span>
+                    <span class="date__block">
+                    <span class="date__month">окт</span>
+                    <span class="date__year">2015</span>
+                </span>
+                </div>
+                <h3 class="announcement__header">Прием заявок на Конкурс <br/>"За жизнь"</h3>
+                <div class="announcement__tag">За жизнь</div>
+                <div class="announcement__description">Конкурс "За жизнь" проводится во исполнение Национальной
+                    программы демографической безопасности Республики Беларусь на 2011-2015 гг.
+                </div>
+                <div class="announcement__btn-group">
+                    <button class="announcement__button-events" type="button">все события</button>
+                    <a class="announcement__calendar" type="button" href="#pastEvents">Календарь<br/>событий</a>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="images/Save-live.jpg"/>
+            </div>
+        </section>
+    </div>
+
+    <!--CURRENT PROJECT SECTION-->
+
+    <div class="projects-wrapper" id="currentProjects">
+        <section class="current-projects">
+            <h4 class="current-projects__header">Текущие проекты</h4>
+            <div class="current-projects__group">
+                <div class="current-projects__item"><a class="current-projects__link" href="#" tabindex="7"><span
+                        class="current-projects__title">Благоустройство центрального парка в Вилейке</span></a></div>
+                <div class="current-projects__item"><a class="current-projects__link" href="#" tabindex="8"><span
+                        class="current-projects__title">Помощь Полоцкому монастырю</span></a></div>
+                <div class="current-projects__item"><a class="current-projects__link" href="#" tabindex="9"><span
+                        class="current-projects__title">Просветительские программы</span></a></div>
+            </div>
+            <button class="current-projects__button">все проекты</button>
+        </section>
+    </div>
+
+    <!--ABOUT FOUNDATION SECTION-->
+
+    <div class="foundation-wrapper" id="aboutFound">
+        <div class="foundation">
+            <section class="about-foundation">
+                <h4 class="about-foundation__header">О фонде</h4>
+                <div class="about-foundation__description-wrapper">
+                    <span class="about-foundation__description">Целью Фонда является благотворительная деятельность, направленная на возрождение духовно-нравственных традиций и ценностей, гуманитарная помощь всем слоям населения, поддержка социальных, благотворительных, культурных, образовательных и прочих общественно-полезных программ и инициатив.</span>
+                </div>
+                <a class="about-foundation__learn-more" href="#" tabindex="10">узнать больше</a>
+            </section>
+            <div class="aside-banner">
+                <div class="aside-banner__background">
+                    <div class="aside-banner__wrapper">
+                        <span class="aside-banner__information">Отличный способ помочь - поделиться!</span>
+                        <div class="social-btn">
+                            <div class="social-btn__group">
+                                <a class="social-btn__item fab fa-facebook-f" href="#"></a>
+                                <a class="social-btn__item fab fa-vk" href="#"></a>
+                                <a class="social-btn__item fab fa-odnoklassniki" href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PAST EVENTS SECTION-->
+
+    <div class="past-events-wrapper" id="pastEvents">
+        <section class="past-events">
+            <h4 class="past-events__header">Прошедшие события</h4>
+            <div class="past-events__information">
+                <div class="past-events_container">
+                    <div class="past-events__column-container" id="columnContainer">
+                        <div class="past-events__column" id="firstContainer">
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">14</span>
+                                        <span class="date__block">
+                    <span class="date__month">июл</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
+                                        ценности</h4>
+                                    <img class="past-events__picture" src="./images/family_value.jpg">
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag" >Благоустройство центрального парка в г.Вилейка</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">28</span>
+                                        <span class="date__block">
+                    <span class="date__month">авг</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">В Полоцком монастыре поставили забор вверх
+                                        ногами</h4>
+                                    <img class="past-events__picture" src="../dist/images/sky.jpg"/>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Благоустройство Центрального парка в г.Вилейке</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                        </div>
+                        <div class="past-events__column">
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">23</span>
+                                        <span class="date__block">
+                    <span class="date__month">июл</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Конкурс "За жизнь" будет проводиться в г.Полоцке</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">28</span>
+                                        <span class="date__block">
+                    <span class="date__month">авг</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">В Вилеском парке нашли перевернутый забор</h4>
+                                    <img class="past-events__picture" src="../dist/images/park-Vileika.jpg"/>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Благоустройство Центрального парка в г.Вилейке</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">28</span>
+                                        <span class="date__block">
+                    <span class="date__month">авг</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">В мужском туалете сорвало прокладку с крана горячей
+                                        воды</h4>
+                                    <img class="past-events__picture" src="../dist/images/park-Vileika.jpg"/>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Благоустройство Центрального парка в г.Вилейке</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                            <article class="past-events__item-wrapper">
+                                <div class="past-events__item">
+                                    <div class="date">
+                                        <span class="date__number">01</span>
+                                        <span class="date__block">
+                    <span class="date__month">сен</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                                    </div>
+                                    <h4 class="past-events__header">Батюшка осветил школу</h4>
+                                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                                </div>
+                                <a class="past-events__tag">Стротельство воскресной школы в г.Минске</a>
+                            </article>
+                        </div>
+                    </div>
+                    <button class="past-events__show-more-btn" id="showMoreBtn">Загрузить еще</button>
+                </div>
+                <div class="aside-banner">
+                    <div id="fixedElement" class="aside-banner__background">
+                        <div class="aside-banner__wrapper">
+                            <span class="aside-banner__information">Отличный способ помочь - поделиться!</span>
+                            <div class="social-btn">
+                                <div class="social-btn__group">
+                                    <a class="social-btn__item fab fa-facebook-f" href="#"></a>
+                                    <a class="social-btn__item fab fa-vk" href="#"></a>
+                                    <a class="social-btn__item fab fa-odnoklassniki" href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--OUR PARTNERS SECTION-->
+
+    <div class="our-partners" id="ourPartners">
+        <div class="our-partners__wrapper">
+            <div class="our-partners__list">
+                <div class="our-partners__header-wrapper">
+                    <h4 class="our-partners__header">Наши партнёры</h4>
+                    <span class="arrow-back" id="arrowBack">вверх</span>
+                </div>
+                <div class="our-partners__logo">
+                    <a class="our-partners__link" href="#" tabindex="11"><img class="our-partners__image" src="./images/shate-m.png"></a>
+                    <a class="our-partners__link" href="#" tabindex="12"><img class="our-partners__image"
+                                                                src="./images/ukola.png"></a>
+                    <a class="our-partners__link" href="#" tabindex="13"><img class="our-partners__image"
+                                                                src="./images/velcom.png"></a>
+                    <a class="our-partners__link" href="#" tabindex="14"><img class="our-partners__image" src="./images/mediola.png"></a>
+                </div>
+            </div>
+
+            <div class="help-banner">
+                <div class="help-banner__wrapper">
+                    <span class="help-banner__content">Хотите помогать?</span>
+                    <span class="help-banner__content">Присоединяйтесь</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!--FOOTER-->
+
+<footer class="footer" id="footer">
+    <div class="footer__wrapper">
+        <div class="footer__information">
+            <div class="footer__information-main">
+                <h5 class="footer__information-header">Благотворительный фонд имени Преподобной Евфросинии Полоцкой</h5>
+                <span class="footer__information-goals">
+                Целью Фонда является благотворительная деятельность, направленная на возрождение духовно-нравственных ценностей и традиций, гуманитарная помощь всем слоям населения, поддержка социальных, благотворительных,культурных, образовательных и прочих общественно-полезных инициатив и программ.
+                </span>
+            </div>
+            <address class="contacts">
+                <h5 class="contacts__header">контакты</h5>
+                <span class="contacts__address">220100 г. Минск,
+                ул. Кульман, 33А, комната 7</span>
+                <span class="contacts__telephone">тел.: + 375 (17) 290-10- 95</span>
+                <span class="contacts__e-mail">e-mail: info@blagotvoritel.by</span>
+                <button class="contacts__btn">Напишите нам</button>
+            </address>
+            <div class="footer__social">
+                <h5 class="footer__social-header">Мы в социальных сетях:</h5>
+                <div class="social-btn__group">
+                    <a class="social-btn__item fab fa-facebook-f" href="#"></a>
+                    <a class="social-btn__item fab fa-vk" href="#"></a>
+                    <a class="social-btn__item fab fa-odnoklassniki" href="#"></a>
+                </div>
+            </div>
+            <nav class="footer__menu">
+                <a class="footer__menu-item" href="#aboutFound" tabindex="15">о фонде</a>
+                <a class="footer__menu-item" href="#pastEvents" tabindex="16">события</a>
+                <a class="footer__menu-item" href="#currentProjects" tabindex="17">проекты</a>
+                <a class="footer__menu-item" href="#ourPartners" tabindex="18">адресная помощь</a>
+                <a class="footer__menu-item" href="#ourPartners" tabindex="19">библиотека</a>
+            </nav>
+        </div>
+
+        <div class="footer__author-wrights">@ Благотворительный фонд имени Преподобной Евфросинии Полоцкой 2018. Все
+            права
+            защищены.
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
