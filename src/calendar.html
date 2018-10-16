@@ -5,9 +5,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
+    <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
 </head>
 <body>
 
@@ -28,39 +29,126 @@
         </nav>
         <button id="menuBtn" class="nav-btn"></button>
     </div>
+    <div>
+        <span>сент</span>
+        <span>09</span>
+        <span>18</span>
+        <span>27</span>
+        <span>окт</span>
+        <span>09</span>
+        <span>12</span>
+        <span>21</span>
+        <span>25</span>
+        <span>30</span>
+    </div>
 </header>
 
 <!--MAIN-->
 
 <main class="main">
 
-    <!--EVENTS SECTION-->
-
-    <div class="events-wrapper">
-        <section class="events">
-            <div class="announcement">
+    <!--SLIDER SECTION-->
+    <div class="slider-wrapper" id="slider">
+        <div class="slider">
+            <div class="slider__item">
+                <div class="past-events__item">
                 <div class="date">
                     <span class="date__number">1</span>
                     <span class="date__block">
-                    <span class="date__month">окт</span>
+                    <span class="date__month">июл</span>
                     <span class="date__year">2015</span>
-                </span>
+                            </span>
                 </div>
-                <h3 class="announcement__header">Прием заявок на Конкурс <br/>"За жизнь"</h3>
-                <div class="announcement__tag">За жизнь</div>
-                <div class="announcement__description">Конкурс "За жизнь" проводится во исполнение Национальной
-                    программы демографической безопасности Республики Беларусь на 2011-2015 гг.
-                </div>
-                <div class="announcement__btn-group">
-                    <button class="announcement__button-events" type="button">все события</button>
-                    <a class="announcement__calendar" type="button" href="calendar.html">Календарь<br/>событий</a>
-                </div>
+                <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
+                    ценности</h4>
+                <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
             </div>
-            <div class="slider">
-                <img src="images/save-live.jpg"/>
+                <span class="slick-prev">&#8592;</span><span class="slick-next">&#8594;</span>
+                <img class="slider__img" src="images/img-01.jpg">
             </div>
-        </section>
+            <div class="slider__item">
+                <div class="past-events__item">
+                    <div class="date">
+                        <span class="date__number">2</span>
+                        <span class="date__block">
+                    <span class="date__month">июл</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                    </div>
+                    <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
+                        ценности</h4>
+                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                </div>
+                <span class="slick-prev">&#8592;</span><span class="slick-next">&#8594;</span>
+                <img class="slider__img" src="images/img-02.jpg">
+            </div>
+            <div class="slider__item">
+                <div class="past-events__item">
+                    <div class="date">
+                        <span class="date__number">3</span>
+                        <span class="date__block">
+                    <span class="date__month">июл</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                    </div>
+                    <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
+                        ценности</h4>
+                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                </div>
+                <span class="slick-prev">&#8592;</span><span class="slick-next">&#8594;</span>
+                <img class="slider__img" src="images/img-03.jpg">
+            </div>
+            <div class="slider__item">
+                <div class="past-events__item">
+                    <div class="date">
+                        <span class="date__number">4</span>
+                        <span class="date__block">
+                    <span class="date__month">июл</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                    </div>
+                    <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
+                        ценности</h4>
+                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                </div>
+                <span class="slick-prev">&#8592;</span><span class="slick-next">&#8594;</span>
+                <img class="slider__img" src="images/img-04.jpg"></div>
+            <div class="slider__item">
+                <div class="past-events__item">
+                    <div class="date">
+                        <span class="date__number">5</span>
+                        <span class="date__block">
+                    <span class="date__month">июл</span>
+                    <span class="date__year">2015</span>
+                            </span>
+                    </div>
+                    <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
+                        ценности</h4>
+                    <span class="past-events__description">
+                         Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
+Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
+        </span>
+                </div>
+                <span class="slick-prev">&#8592;</span><span class="slick-next">&#8594;</span>
+                <img class="slider__img" src="images/img-05.jpg">
+            </div>
+        </div>
     </div>
+
+
+
 
     <!--CURRENT PROJECT SECTION-->
 
@@ -127,7 +215,7 @@
                                     </div>
                                     <h4 class="past-events__header">Молодежь - за жизнь нравственность и семейные
                                         ценности</h4>
-                                    <img class="past-events__picture" src="images/family_value.jpg">
+                                    <img class="past-events__picture" src="./images/family_value.jpg">
                                     <span class="past-events__description">
                          Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
 Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
@@ -146,7 +234,7 @@
                                     </div>
                                     <h4 class="past-events__header">В Полоцком монастыре поставили забор вверх
                                         ногами</h4>
-                                    <img class="past-events__picture" src="images/sky.jpg"/>
+                                    <img class="past-events__picture" src="../dist/images/sky.jpg"/>
                                     <span class="past-events__description">
                          Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
 Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
@@ -268,7 +356,7 @@
                             </span>
                                     </div>
                                     <h4 class="past-events__header">В Вилеском парке нашли перевернутый забор</h4>
-                                    <img class="past-events__picture" src="images/park-Vileika.jpg"/>
+                                    <img class="past-events__picture" src="../dist/images/park-Vileika.jpg"/>
                                     <span class="past-events__description">
                          Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
 Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
@@ -287,7 +375,7 @@
                                     </div>
                                     <h4 class="past-events__header">В мужском туалете сорвало прокладку с крана горячей
                                         воды</h4>
-                                    <img class="past-events__picture" src="images/park-Vileika.jpg"/>
+                                    <img class="past-events__picture" src="../dist/images/park-Vileika.jpg"/>
                                     <span class="past-events__description">
                          Целью конкурса является поощрение творческой инициативы молодых людей, направленной на утверждение традиционных нравственных и семейных ценностей, присущих белорусскому народу и лежащих в основе отечественных культурно-исторических и религиозных традиций.
 Предмет конкурса – «добрословы», короткие эссе-сочинения на определенные заданные в номинациях темы, сопровождаемые авторским слоганом и изображением (оригинальной авторской фотографией или видео-роликом или рисунком) с последующим их размещением в интернет-пространстве.
@@ -395,12 +483,12 @@
                     <span class="arrow-back" id="arrowBack">вверх</span>
                 </div>
                 <div class="our-partners__logo">
-                    <a class="our-partners__link" href="#" tabindex="11"><img class="our-partners__image" src="images/shate-m.png"></a>
+                    <a class="our-partners__link" href="#" tabindex="11"><img class="our-partners__image" src="./images/shate-m.png"></a>
                     <a class="our-partners__link" href="#" tabindex="12"><img class="our-partners__image"
-                                                                src="images/ukola.png"></a>
+                                                                              src="./images/ukola.png"></a>
                     <a class="our-partners__link" href="#" tabindex="13"><img class="our-partners__image"
-                                                                src="images/velcom.png"></a>
-                    <a class="our-partners__link" href="#" tabindex="14"><img class="our-partners__image" src="images/mediola.png"></a>
+                                                                              src="./images/velcom.png"></a>
+                    <a class="our-partners__link" href="#" tabindex="14"><img class="our-partners__image" src="./images/mediola.png"></a>
                 </div>
             </div>
 

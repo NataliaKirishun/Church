@@ -30,8 +30,7 @@ module.exports = {
                         }
                     }
                 ]
-            },
-            {
+            },     {
                 test: /\.(ogg|mp3|wav|mpe?g)$/i,
                 use: {
                     loader: 'file-loader',
@@ -59,8 +58,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
+            chunks: ['page1'],
             template: './src/index.html',
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            hash: true,
+            chunks: ['page2'],
+            template: './src/calendar.html',
+            filename: 'calendar.html'
         }),
         new webpack.ProvidePlugin({
             $:"jquery/dist/jquery.min.js",
