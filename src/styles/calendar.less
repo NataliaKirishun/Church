@@ -1,0 +1,155 @@
+@import "variables";
+
+@keyframes scaling {
+    0% {
+        transform: translateY(360px) scale(0);
+    }
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 460px;
+    border-top: 2px solid @MAIN_COLOR;
+    .slider {
+
+        &__img {
+            max-width: 600px;
+            height: 360px;
+            overflow: visible;
+        }
+
+        .slick-current.slick-active {
+            display: flex;
+
+            .past-events__item {
+                display: block;
+                width: 400px;
+                animation: scaling 1.5s linear;
+            }
+        }
+    }
+}
+
+.past-events__header {
+    font-family: PlayfairDisplay, "Times New Roman", serif;
+    color: #062538;
+    font-size: 22px;
+    font-weight: 200;
+}
+
+.past-events__description {
+    text-overflow: ellipsis;
+    font-family: Roboto, Arial, sans-serif;
+    color: #b89766;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: justify;
+    overflow: hidden;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-wrap: normal;
+}
+
+.slider__item .past-events__item {
+    width: 280px;
+    display: none;
+    padding: 30px;
+}
+
+.slick-center {
+    position: relative;
+}
+
+.slick-center .slick-prev, .slick-center .slick-next {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    background-color: @MAIN_COLOR;
+    width: 60px;
+    height: 60px;
+    top: 330px;
+}
+
+.slick-center .slick-next {
+    right: 540px;
+    &:before {
+        content: '';
+        background: url(../images/arrow.png) 0 0 no-repeat;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        transform: rotate(90deg);
+        top: -10px;
+    }
+    &:hover:before {
+        background: url(../images/arrow.png) -78px 0 no-repeat;
+    }
+}
+
+.slick-center .slick-prev {
+    left: 390px;
+    &:before {
+        content: '';
+        background: url(../images/arrow.png) 0 0 no-repeat;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        transform: rotate(-90deg);
+        top: 10px;
+    }
+    &:hover:before {
+        background: url(../images/arrow.png) -78px 0 no-repeat;
+    }
+}
+
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+
+    .slick-dots {
+        bottom:auto;
+    }
+
+}
+
+.slick-dots li button:before {
+    display:none;
+}
+
+.calendar .slick-dots li,  .calendar .slick-dots li button {
+        color: @MAIN_COLOR;
+        border: 0;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        outline: none;
+        line-height: 20px;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+}
+
+.calendar .slick-dots li {
+    text-transform: uppercase;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.calendar .slick-dots .slick-active button {
+    background-color: @MAIN_COLOR;
+    border-radius: 50%;
+    color: @WHITE_COLOR;
+}
+
+
+
+
+
+

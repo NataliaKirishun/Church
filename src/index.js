@@ -85,62 +85,128 @@ function scrollTop() {
 }
 
 
-$('.slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    centerMode: true,
-    focusOnSelect: true,
-    variableWidth: true,
-    prevArrow: $('.slick-prev'),
-    nextArrow: $('.slick-next')
-});
+//getting information about new events from the server
+
+let eventsArray;
+
+$.ajax({
+    url: "../bd.json"
+})
+    .done(function (response) {
+        eventsArray = response.events;
+        let sliderWrapper = document.querySelector('.slider-wrapper');
+        let slider = createSlider(eventsArray);
+        sliderWrapper.prepend(slider);
+
+        $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            focusOnSelect: true,
+            variableWidth: true,
+            dots: true,
+            appendDots: $('.calendar'),
+            prevArrow: $('.slick-prev'),
+            nextArrow: $('.slick-next')
+        });
 
 
-// $('#slider').on('afterChange', function () {
-//     let spanPrev = document.createElement('span');
-//     spanPrev.className = 'slick-prev';
-//     spanPrev.innerHTML = '&#8592';
-//     let spanNext = document.createElement('span');
-//     spanNext.className = 'slick-next';
-//     spanNext.innerHTML = '&#8594;';
-//     $('.slick-center').append(spanPrev, spanNext);
-// });
+        let $arrayOfDots = $("li[role='presentation']");
+        let currentMonth;
+        let dotsParent=document.querySelector('.slick-dots');
+        $.each($arrayOfDots, function (index, value) {
+            value.firstChild.innerHTML=eventsArray[index].date.number;
+            if (eventsArray[index].date.month !== currentMonth) {
+                let span=document.createElement('span');
+                currentMonth=eventsArray[index].date.month;
+                span.innerHTML=currentMonth;
+                value.insertBefore(span,value.firstChild);
+                value.style.width='80px';
+                span.style.marginRight='10px';
+                span.setAttribute('disabled', 'true');
+            }
+        })
+    });
+
+function checkCurrent() {
+    let currentDate = $(this)[0].classList[1];
+    $('.slider__item').removeClass('slick-current slick-active slick-center');
+    $(`.slider__item` + `.` + `${currentDate}`).addClass('slick-current slick-active slick-center');
+    // console.log( $(`.slider__item`+`.`+`${currentDate}`));
+}
 
 
-// let $prevInner = $('.slick-center.slick-active').prev()[0].innerHTML;
-// $('.slick-center.slick-active').prev()[0].innerHTML = $('.slick-current')[1].innerHTML;
-// console.log('now', $prevInner);
-//
-//
-// $('#slider').on('afterChange', function () {
-//     $prevInner = $('.slick-center.slick-active').prev()[0].innerHTML;
-//     console.log('after', $prevInner);
-//     $('.slick-center.slick-active').prev()[0].innerHTML = $('.slick-current')[1].innerHTML;
-//
-// });
-//
-// $('#slider').on('beforeChange', function () {
-//     console.log('before prevInner', $prevInner);
-//     $('.slick-center.slick-active').prev()[0].innerHTML = $prevInner;
-// });
+function highlightCurrent() {
+    let currentClass = document.querySelector('.slick-current').classList[1];
+    let currentCalendarItem = $('.calendar__wrapper').find(`.` + `${currentClass}`);
+    currentCalendarItem.addClass('highlight');
+}
+
+function createSlider(array) {
+    let fragment = '<div class="past-events__item">\n' +
+        '           <div class="date">\n' +
+        '           <span class="date__number"></span>\n' +
+        '           <span class="date__block">\n' +
+        '           <span class="date__month"></span>\n' +
+        '           <span class="date__year"></span>\n' +
+        '           </span>\n' +
+        '           </div>\n' +
+        '           <h4 class="past-events__header"></h4>\n' +
+        '       <span class="past-events__description"></span>\n' +
+        '       </div>\n' +
+        '       <span class="slick-prev">&#8592;</span><span class="slick-next">&#8594;</span>\n' +
+        '       <img class="slider__img" src="">';
+
+    let slider = document.createElement('div');
+    slider.className = 'slider';
+    array.forEach((item, i) => {
+        let sliderItem = document.createElement('div');
+        sliderItem.classList.add('slider__item', `item_${i}`);
+        sliderItem.innerHTML = fragment;
+        slider.appendChild(sliderItem);
+        sliderItem.querySelector('.date__number').innerHTML = item.date.number;
+        sliderItem.querySelector('.date__month').innerHTML = item.date.month;
+        sliderItem.querySelector('.date__year').innerHTML = item.date.year;
+        sliderItem.querySelector('.past-events__header').innerHTML = item.title;
+        sliderItem.querySelector('.past-events__description').innerHTML = item.text;
+        sliderItem.querySelector('.slider__img').src = item.imgUrl;
+    });
+    return slider;
+}
+
+function createCalendar(array) {
+    let calendarWrapper = document.querySelector('.calendar__wrapper');
+    let prevMonth;
+    array.forEach((item, index) => {
+        let currentMonth = item.date.month;
+        if (currentMonth !== prevMonth) {
+            prevMonth = currentMonth;
+
+            let monthSpan = document.createElement('span');
+            monthSpan.className = 'calendar__month';
+            monthSpan.innerHTML = currentMonth;
+
+            let dataSpan = createDataItem(item.date.number, index);
+            calendarWrapper.append(monthSpan, dataSpan);
+        } else {
+            let dataSpan = createDataItem(item.date.number, index);
+            calendarWrapper.append(dataSpan);
+        }
+    });
+
+}
+
+function createDataItem(number, i) {
+    let dataSpan = document.createElement('span');
+    dataSpan.classList.add('calendar__day', `item_${i}`);
+    dataSpan.innerHTML = number;
+    return dataSpan;
+}
 
 
-// let $centerSlide=$('.slick-center');
-// let previous=$centerSlide.prev()[0].innerHTML;
-// $centerSlide.prev()[0].innerHTML=$('.slick-current')[1].innerHTML;
-//
-//
-// $('#slider').on('beforeChange', function(){
-//    $('.slick-center').prev()[0].innerHTML=previous;
-// });
-// $('#slider').on('afterChange', function(){
-//     previous=$('.slick-center').prev()[0].innerHTML;
-//     console.log('11',  previous);
-//     $('.slick-center').prev()[0].innerHTML=$('.slick-current')[1].innerHTML;
-//     console.log('2' , previous);
-//    /*$('.slick-center').prev()[0].innerHTML=$('.slick-current')[1].innerHTML;*/
-// });
+
+
+
 
 
 
