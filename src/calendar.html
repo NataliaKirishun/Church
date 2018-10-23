@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
     <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script defer src="calendar.js"></script>
+
+
 </head>
 <body>
 
@@ -36,62 +38,14 @@
 <main class="main">
 
     <!--SLIDER SECTION-->
-    <div class="slider-wrapper" id="slider">
-
+    <div class="slider-wrapper" id="slider"></div>
+    <div class="calendar-wrapper">
         <div class="calendar">
-            <div class="calendar__wrapper">
 
-            </div>
-            <!--<a class="announcement__calendar" type="button" href="calendar.html">Календарь<br/>событий</a>-->
         </div>
+        <a class="announcement__calendar" type="button" href="calendar.html">Календарь<br/>событий</a>
     </div>
 
-
-
-    <!--CURRENT PROJECT SECTION-->
-
-    <div class="projects-wrapper" id="currentProjects">
-        <section class="current-projects">
-            <h4 class="current-projects__header">Текущие проекты</h4>
-            <div class="current-projects__group">
-                <div class="current-projects__item"><a class="current-projects__link" href="#" tabindex="7"><span
-                        class="current-projects__title">Благоустройство центрального парка в Вилейке</span></a></div>
-                <div class="current-projects__item"><a class="current-projects__link" href="#" tabindex="8"><span
-                        class="current-projects__title">Помощь Полоцкому монастырю</span></a></div>
-                <div class="current-projects__item"><a class="current-projects__link" href="#" tabindex="9"><span
-                        class="current-projects__title">Просветительские программы</span></a></div>
-            </div>
-            <button class="current-projects__button">все проекты</button>
-        </section>
-    </div>
-
-    <!--ABOUT FOUNDATION SECTION-->
-
-    <div class="foundation-wrapper" id="aboutFound">
-        <div class="foundation">
-            <section class="about-foundation">
-                <h4 class="about-foundation__header">О фонде</h4>
-                <div class="about-foundation__description-wrapper">
-                    <span class="about-foundation__description">Целью Фонда является благотворительная деятельность, направленная на возрождение духовно-нравственных традиций и ценностей, гуманитарная помощь всем слоям населения, поддержка социальных, благотворительных, культурных, образовательных и прочих общественно-полезных программ и инициатив.</span>
-                </div>
-                <a class="about-foundation__learn-more" href="#" tabindex="10">узнать больше</a>
-            </section>
-            <div class="aside-banner">
-                <div class="aside-banner__background">
-                    <div class="aside-banner__wrapper">
-                        <span class="aside-banner__information">Отличный способ помочь - поделиться!</span>
-                        <div class="social-btn">
-                            <div class="social-btn__group">
-                                <a class="social-btn__item fab fa-facebook-f" href="#"></a>
-                                <a class="social-btn__item fab fa-vk" href="#"></a>
-                                <a class="social-btn__item fab fa-odnoklassniki" href="#"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!--PAST EVENTS SECTION-->
 
@@ -354,20 +308,92 @@
                     </div>
                     <button class="past-events__show-more-btn" id="showMoreBtn">Загрузить еще</button>
                 </div>
-                <div class="aside-banner">
-                    <div id="fixedElement" class="aside-banner__background">
-                        <div class="aside-banner__wrapper">
-                            <span class="aside-banner__information">Отличный способ помочь - поделиться!</span>
-                            <div class="social-btn">
-                                <div class="social-btn__group">
-                                    <a class="social-btn__item fab fa-facebook-f" href="#"></a>
-                                    <a class="social-btn__item fab fa-vk" href="#"></a>
-                                    <a class="social-btn__item fab fa-odnoklassniki" href="#"></a>
-                                </div>
-                            </div>
+                    <div class="aside-filter">
+                        <div class="filter">
+                            <h3 class="filter-title">По годам</h3>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Все</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">2003</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">2004</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">2005</span>
+                            </label>
+                        </div>
+                        <div class="filter" >
+                            <h3 class="filter-title">По типам</h3>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Все</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Рождественнский подарок</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Пасхальный подарок</span>
+                            </label>
+                        </div>
+                        <div class="filter">
+                            <h3 class="filter-title">По проектам</h3>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Все</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Помощь полоцкому монастырю</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Стройка воскресной школы</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Инвалиды: акции, подарки, мероприятия</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Благоустройство  парка в г. Вилейке</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Детский лагерь</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Паломнические поездки</span>
+                            </label>
+                            <label class="input-group">
+                                <input class="checkbox" type="radio" name="checkbox-test">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Просветительскте программы</span>
+                            </label>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
     </div>

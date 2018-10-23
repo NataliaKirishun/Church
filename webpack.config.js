@@ -5,10 +5,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: {main: './src/index.js'},
+    entry: {
+        main: './src/index.js',
+        calendar: './src/calendar.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js'
+        filename: '[name].js'
     },
     module:{
         rules:[
