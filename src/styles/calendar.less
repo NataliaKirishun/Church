@@ -161,6 +161,10 @@
 
 .past-events {
 
+    .past-events__filter {
+        display:none;
+    }
+
     .aside-filter {
         flex:0 0 27%;
         font-family: PlayfairDisplay, "Times New Roman", serif;
@@ -233,6 +237,25 @@
 
 
     }
+}
+
+@media screen and  (min-width: 768px) and ( max-width: 1023px) {
+
+    .slider__item .past-events__item {
+        padding-left:120px;
+    }
+
+    .slick-prev.slick-arrow {
+        left:480px;
+    }
+
+    .past-events {
+
+        &__filter {
+            display: inline-block;
+        }
+    }
+
 }
 
 

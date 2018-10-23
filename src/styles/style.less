@@ -1,8 +1,11 @@
-@import "desktop";
-@import "tablet";
-@import "mobile";
-@import "calendar";
 @import "variables";
+@import "mobile";
+@import "tablet";
+@import "desktop";
+
+
+@import "calendar";
+
 @import "../../node_modules/slick-carousel/slick/slick";
 @import "../../node_modules/slick-carousel/slick/slick-theme";
 
@@ -28,6 +31,7 @@ a {
 html {
   width: 100%;
   height: 100%;
+
 
   body {
     display: flex;
@@ -107,6 +111,7 @@ html {
             position: relative;
             right: -100px;
             display: flex;
+            overflow: hidden;
 
             img {
               width: 640px;

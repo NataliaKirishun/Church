@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/index.js',
+        index: './src/index.js',
         calendar: './src/calendar.js'
     },
     output: {

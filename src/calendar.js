@@ -25,7 +25,26 @@ $.ajax({
             dots: true,
             appendDots: $('.calendar'),
             prevArrow: $('.slick-prev'),
-            nextArrow: $('.slick-next')
+            nextArrow: $('.slick-next'),
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false
+                    }
+                }
+            ]
+
+
         });
 
 
